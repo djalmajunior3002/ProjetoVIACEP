@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro + Clima da Cidade do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cadastro-container">
+        <h2>🥸 Cadastro de Cliente🥸</h2>
+        <form id="cadastroForm">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone">
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" maxlength="8" required>
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" readonly>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" readonly>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" readonly required>
+
+            <label for="estado">Estado (UF):</label>
+            <input type="text" id="estado" maxlength="2" readonly required>
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+    </div>
+
+    <div id="clima-container" style="display: none;">
+        <h2>🌞⛅🌦️🌧️⛈️Clima Atual em <span id="clima-cidade"></span></h2>
+        <p>Temperatura: <span id="temperatura" class="temperatura-cor">--</span></p>
+        <p>Hora Local: <span id="hora-local">--</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
